@@ -12,7 +12,6 @@ module.exports.getTasks = (req,res)=>{
         }
     })
 }
-
 module.exports.addTask = async (req,res)=>{
     let task = new Task({
         name:req.body.name,
