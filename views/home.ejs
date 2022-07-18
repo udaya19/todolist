@@ -12,9 +12,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
+    <!--Heading-->
     <div class="heading">
         <h1>Todo App</h1>
     </div>
+    <!--Input form-->
     <div class="task_form">
         <form action="/add-user" method="post">
             <input type="text" name="name" id="task-name" required placeholder="Enter task to be done"> <br>
@@ -30,6 +32,7 @@
             <input type="submit" value="+ Add Task">
         </form>
     </div>
+    <!--Rendering tasks from backend to UI-->
     <div class="task-list">
         <ul>
             <table>

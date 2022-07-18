@@ -1,6 +1,7 @@
 //importing libraries
 const express = require('express');
 const app = express();
+//Defining port number
 const port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 //Parsing the data
