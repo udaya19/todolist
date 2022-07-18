@@ -44,7 +44,14 @@ td, th {
 }
 tr:nth-child(even) {
     background-color: white;
-  }
+}
+#delete{
+    text-decoration: none;
+    color: black;
+}
+#delete:hover{
+    color: red;
+}
 /* .task-list ul li{
     display: flex;
 }

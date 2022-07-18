@@ -14,6 +14,16 @@ router.get('/',(req,res)=>{
         }
     })
 })
+router.get('/delete-task/',(req,res)=>{
+    let id = req.query.id;
+    Task.findOneAndDelete(id,(err)=>{
+        if(err){
+            console.log("Couldn't delete task");
+            return;
+        }
+        res.redirect('/');
+    })
+})
 router.post('/add-user',async (req,res)=>{
     let task = new Task({
         name:req.body.name,

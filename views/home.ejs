@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
     <div class="heading">
@@ -36,6 +37,7 @@
                     <th>Task Name</th>
                     <th>Task Category</th>
                     <th>Task Due date</th>
+                    <th></th>
                 </tr>
             <% for(let i of task_list){ %>
                 
@@ -54,6 +56,13 @@
                                 </td>
                                 <td>
                                     <%= i.date.toDateString() %>
+                                </td>
+                                <td>
+                                    <a href="/delete-task/?name=<%=i.name%>" id="delete">
+                                        <span class="material-symbols-outlined">
+                                            delete
+                                        </span>
+                                    </a>
                                 </td>
                             </tr>
                         
