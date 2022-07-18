@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="heading">
+        <h1>Todo App</h1>
+    </div>
+    <div class="task_form">
+        <form action="/add-user" method="post">
+            <input type="text" name="name" id="task-name" required placeholder="Enter task to be done"> <br>
+            <select name="category" required id="task-category">
+                <option value="">Choose a category</option>
+                <option value="Personal">Personal</option>
+                <option value="Work">Work</option>
+                <option value="School">School</option>
+                <option value="Cleaning">Cleaning</option>
+                <option value="Others">Others</option>
+            </select> 
+            <input type="date" name="date" required id="task-date"> <br>
+            <input type="submit" value="+ Add Task">
+        </form>
+    </div>
+    <div class="task-list">
+        <ul>
+            <table>
+                <tr>
+                    <th>Task Name</th>
+                    <th>Task Category</th>
+                    <th>Task Due date</th>
+                </tr>
+            <% for(let i of task_list){ %>
+                
+                    <!-- <li>
+                        <p><%= i.name %>:</p>
+                    </li>
+                    <li>
+                        <p id="category-list"><%= i.category %></p>
+                    </li> -->  
+                            <tr>
+                                <td>
+                                    <%= i.name %>
+                                </td>
+                                <td>
+                                    <%= i.category %>
+                                </td>
+                                <td>
+                                    <%= i.date.toDateString() %>
+                                </td>
+                            </tr>
+                        
+                
+            <%}%>
+        </table>
+        </ul>
+    </div>
+</body>
+</html>

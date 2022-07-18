@@ -1,0 +1,53 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: whitesmoke ;
+}
+.heading h1,.task_form{
+    text-align: center;
+}
+.task_form{
+    margin: 2rem;
+}
+
+#task-name{
+    width: 20%;
+    margin-bottom: 1rem;
+    padding: 0.5rem 4rem 0.5rem 1rem;
+}
+#task-category,#task-date{
+    width: 15%;
+    margin-bottom: 1rem;
+    padding: 0.5rem 4rem 0.5rem 1rem;
+}
+input[type="submit"]{
+    border: none;
+    color: white;
+    background-color: red;
+    padding: 0.5rem 4rem;
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+}
+.task-list{
+    margin-left: 30%;
+}
+ul{
+    list-style: none;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: white;
+  }
+/* .task-list ul li{
+    display: flex;
+}
+#category-list{
+    margin-left: 5rem;
+} */
